@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function confereSenha() {
+            var senha = document.getElementById("senha");
+            var confirmarSenha = document.getElementById("confirmar-senha");
+            var submit = document.getElementById("submit");
+            var p = document.getElementById("p");
+            if (senha.value.length >= 6 && senha.value.length <= 10) {
+                if (senha.value == confirmarSenha.value) {
+                    submit.disabled = false;
+                    p.innerHTML = "<p> </p>";
+                }
+                else {
+                    submit.disabled = true;
+                    p.innerHTML = "<p> *suas senhas não batem. </p>";
+                }
+            }
+            else {
+                submit.disabled = true;
+                p.innerHTML = "<p> *senha inválida. Sua senha deve ter entre 6 a 10 caracteres</p>";
+            }
+
+        }
+
+    </script>
+    <title>Exercicio9</title>
+</head>
+
+<body>
+
+    <form>
+        Login: <input type="text" id="login" required> <br> <br>
+        Senha: <input onchange="confereSenha()" type="password" id="senha"> <br> <br>
+        Confirmar senha:<input onchange="confereSenha()" type="password" id="confirmar-senha">
+        <p id="p">
+        </p> <br>
+        <input id="submit" type="submit" value="Enter" disabled>
+    </form>
+
+</body>
+
+</html>

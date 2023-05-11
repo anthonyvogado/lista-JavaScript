@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function mudaCorVermelho() {
+            var vermelho = document.getElementById("body");
+            vermelho.style.backgroundColor = 'red';
+        }
+
+        function mudaCorVerde() {
+            var verde = document.getElementById("body");
+            verde.style.backgroundColor = 'green';
+        }
+
+        function mudaCorAzul() {
+            var azul = document.getElementById("body");
+            azul.style.backgroundColor = 'blue';
+        }
+
+        function mudaCorAmarelo() {
+            var amarelo = document.getElementById("body");
+            amarelo.style.backgroundColor = 'yellow';
+        }
+
+    </script>
+    <title>Exercicio1</title>
+</head>
+
+<body id="body">
+
+    <form>
+        <input type="button" onclick="mudaCorVermelho()" value="Vermelho"></input>
+        <input type="button" onclick="mudaCorVerde()" value="Verde"></input>
+        <input type="button" onclick="mudaCorAzul()" value="Azul"></input>
+        <input type="button" onclick="mudaCorAmarelo()" value="Amarelo"></input>
+    </form>
+</body>
+
+</html>

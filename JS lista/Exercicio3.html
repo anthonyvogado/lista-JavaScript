@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function mudaCorVermelho() {
+            var body = document.getElementById("body");
+            body.style.backgroundColor = document.getElementById("vermelho").value;
+        }
+
+        function mudaCorVerde() {
+            var body = document.getElementById("body");
+            body.style.backgroundColor = document.getElementById("verde").value;
+        }
+
+        function mudaCorAzul() {
+            var body = document.getElementById("body");
+            body.style.backgroundColor = document.getElementById("azul").value;
+        }
+
+        function mudaCorAmarelo() {
+            var body = document.getElementById("body");
+            body.style.backgroundColor = document.getElementById("amarelo").value;
+        }
+
+    </script>
+    <title>Exercicio3</title>
+</head>
+
+<body id="body">
+
+    <p>Escolha a cor: </p><br>
+    <input id="vermelho" type="radio" value="red" name="fav_language" onchange="mudaCorVermelho()">
+    <label for="vermelho">Vermelho</label><br>
+    <input id="verde" type="radio" value="green" name="fav_language" onchange="mudaCorVerde()">
+    <label for="verde">Verde</label><br>
+    <input id="azul" type="radio" value="blue" name="fav_language" onchange="mudaCorAzul()">
+    <label for="azul">Azul</label><br>
+    <input id="amarelo" type="radio" value="yellow" name="fav_language" onchange="mudaCorAmarelo()">
+    <label for="amarelo">Amarelo</label>
+</body>
+
+</html>

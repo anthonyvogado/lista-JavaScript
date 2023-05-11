@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function apareceBotao() {
+            var contador = 0;
+            var input = document.getElementsByTagName("input");
+            var botao = document.getElementById("botao");
+            for (var index = 0; index < 4; index++) {
+                if (input[index].checked) {
+                    contador++;
+                }
+            }
+            if (contador >= 2) {
+                botao.disabled = false;
+            }
+            else {
+                botao.disabled = true;
+            }
+            contador = 0;
+        }
+
+    </script>
+    <title>Exercicio5</title>
+</head>
+
+<body>
+
+    <form onchange="apareceBotao()">
+        <input type="checkbox" class="checkbox">1 <br>
+        <input type="checkbox" class="checkbox">2 <br>
+        <input type="checkbox" class="checkbox">3 <br>
+        <input type="checkbox" class="checkbox">4 <br>
+        <button id="botao" disabled> Botão </button>
+    </form>
+</body>
+
+</html>

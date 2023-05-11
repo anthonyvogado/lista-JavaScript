@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function validaForm() {
+            var pessoa = document.getElementsByClassName("pessoa");
+            var cpf = document.getElementById("cpf");
+            var cnpj = document.getElementById("cnpj");
+            var dataNascimento = document.getElementById("dataNascimento");
+            if (pessoa[0].checked == true) {
+                cpf.disabled = false;
+                cnpj.disabled = true;
+                dataNascimento.disabled = false;
+
+            }
+            else if (pessoa[1].checked == true) {
+                cnpj.disabled = false;
+                cpf.disabled = true;
+                dataNascimento.disabled = true;
+            }
+            else {
+                cnpj.disabled = true;
+                cpf.disabled = true;
+                dataNascimento.disabled = true;
+            }
+        }
+
+    </script>
+    <title>Exercicio10</title>
+</head>
+
+<body>
+
+    <form onchange="validaForm()">
+        Nome: <input type="text"> <br><br>
+        Pessoa (Física/Jurídica): <input type="radio" class="pessoa" name="fav-language"> Fisica
+        <input type="radio" name="fav-language" class="pessoa"> Juridica<br> <br>
+        CPF: <input type="text" id="cpf" disabled> <br><br>
+        CNPJ: <input type="text" id="cnpj" disabled> <br><br>
+        Data de nascimento:<input type="date" id="dataNascimento" disabled> <br><br>
+        Endereço: <input type="text"> <br><br>
+        CEP: <input type="number"> <br><br>
+        Telefone: <input type="text"> <br><br>
+        E-mail: <input type="email"> <br><br>
+        <input type="submit" id="submit" disabled></input>
+    </form>
+</body>
+
+</html>
